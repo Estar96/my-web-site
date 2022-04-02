@@ -13,7 +13,7 @@
   gtag('config', 'G-ZDKRZ4T4Z5');
 </script>
 <script>
-    function NightDayHandler(self){
+    function nightDayHandler(self){
      var target = document.querySelector('body');
     if (self.value === 'night'){
         target.style.backgroundColor = 'black';
@@ -67,10 +67,10 @@
 
     }">
     리펙토리 전-->
-    <input type="button" value="night" onclick="
-    NightDayhandler(this);
+    <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
         ">
-    <div id = "grid">
+    <div id = "grids">
         <ol>
             <li><a href="1.html">HTML</a></li>
             <li><a href="2.html">CSS</a></li>
@@ -95,17 +95,9 @@
             호환성을 위해 트랜스파일러로 컴파일된다.</p>
         </div>
     </div>
-    <input type="button" value="night" onclick="
-    if (this.value === 'night'){
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        this.value = 'day';
-    } else {
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        this.value = 'night';
-
-    }">
+    <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+    ">
 </body>
 </html>
 
